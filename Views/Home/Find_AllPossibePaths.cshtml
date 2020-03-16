@@ -1,0 +1,60 @@
+﻿@model Game.Models.AllPossiblePaths
+
+@{
+    ViewBag.Title = "Your Submission -";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>of all possible paths</h2>
+
+<div>
+    <h4>AllPossiblePaths</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Length of Floor :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+        <dt>
+            Breath of Floor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breath)
+        </dd>
+
+        <dt>
+            Your Answer (All Possible Paths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPossiblePaths)
+        </dd>
+
+    </dl>
+
+    <div>
+        <div class="alert-warning">
+            @ViewBag.Message
+        </div>
+    </div>
+
+</div>
+<p>
+
+    @Html.ActionLink("View Question", "PossiblPath")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

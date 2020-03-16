@@ -1,0 +1,38 @@
+﻿@model Game.Models.CountNumberOfJumps
+
+@{
+    ViewBag.Title = "Calculate_Steps";
+}
+
+<h2>Calculate_Steps</h2>
+
+<div>
+    <h4>CountNumberOfJumps</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Steps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Steps)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Ans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Ans)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="alert-warning">
+        @ViewBag.Message
+    </div>
+    <br/>
+    <br/>
+    @Html.ActionLink("View Question", "Count_Steps")
+</p>

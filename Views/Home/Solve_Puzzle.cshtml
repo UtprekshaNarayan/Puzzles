@@ -1,0 +1,52 @@
+﻿@model Game.Models.GCD
+
+@{
+    ViewBag.Title = "Find GCD";
+}
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Solve GCD</title>
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <center>
+        <h2>Find GCD of the two numbers</h2>
+        <br />
+        <br />
+        <b>First Number : </b>@Model.FirstName;
+        <br />
+        <b>Second Number : </b>@Model.SecondName;
+        <br />
+        <br />
+        <br />
+
+        @using (Html.BeginForm("Find_Gcd", "Home", FormMethod.Post))
+        {
+
+
+            <h3>Write answer</h3> @Html.TextBox("UserAnswer")
+
+            <button type="submit">Submit</button>
+        }
+
+
+    </center>
+
+
+
+
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,52 @@
+﻿@model Game.Models.LostNumber
+
+@{
+    ViewBag.Title = "Lost_Number";
+}
+
+
+<div class="container">
+    :
+    <h2 style="color:#069">Level 3</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p>
+                <strong>
+                    Bholu got a pair of integers {x1,x2}.<br /> He deciced to make a sequence starting by {x1,x2}.<br />
+                    Every new number is the sum of the previous two and so on. After few days he forgotten the
+                    initial pair.<br /> Luckily, his sister remember values x3 and x4.
+                    Given x3 and x4. Find x1 and x2.
+                </strong>
+            </p>
+            <br />
+            <br />
+            <h3><i>For Example : x1 = 5, x2 = 10. <br />Then x3 = 5 + 10 i.e 15<br />and x4 = 10 + 15 i.e 25</i></h3>
+            <br />
+            <br />
+            <p>
+                <strong>
+                    Given that :<br />Third Number : @Model.ThirdNumberOfSequence<br />
+                    Fourth Number : @Model.FourthNumberOfSequence<br />Find x1 and x2 i.e first and second number of the sequence
+                </strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("CalculateLostNumber", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h3>Write First Number</h3> @Html.TextBox("firstNo")
+        <h3>Write Second Number</h3> @Html.TextBox("secondNo")
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit" class="btn btn-default" />
+        </div>
+    </div>
+
+}
+
+<div>
+
+</div>

@@ -1,0 +1,66 @@
+﻿@model Game.Models.GCD
+
+@{
+    /**/
+
+    ViewBag.Title = "Find_Gcd";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="center-block">
+    <h2>Your Submission of Level 1</h2>
+    <h4>GCD Question</h4>
+
+    <dl class="dl-horizontal">
+        <dt>
+            &nbsp;&nbsp;&nbsp;&nbsp; First Number(given):
+        </dt>
+
+        <dd>
+            <b> @Html.DisplayFor(model => @model.FirstName) </b>
+        </dd>
+
+        <dt>
+            &nbsp;&nbsp;&nbsp;&nbsp;Second Number(given) :
+        </dt>
+
+        <dd>
+            <b> @Html.DisplayFor(model => @model.SecondName) </b>
+        </dd>
+
+        <dt>
+            &nbsp;&nbsp;&nbsp;&nbsp; Your Answer is :
+        </dt>
+
+        <dd>
+            <b> @Html.DisplayFor(model => @model.UserAnswer) </b>
+        </dd>
+
+    </dl>
+</div>
+
+<div>
+
+</div>
+<div>
+
+</div>
+<br />
+<br />
+<div class="alert-warning">
+    <b> @ViewBag.Message </b>
+</div>
+<br />
+<br />
+<p>
+
+    @Html.ActionLink("Go Back to Question", "Solve_Puzzle")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />

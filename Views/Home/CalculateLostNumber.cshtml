@@ -1,0 +1,66 @@
+﻿@model Game.Models.LostNumber
+
+@{
+    ViewBag.Title = "CalculateLostNumber";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>CalculateLostNumber</h2>
+
+<div>
+    <h4>LostNumber</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            x1
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstNoOfSequence)
+        </dd>
+
+        <dt>
+            x2
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondNoOfSequence)
+        </dd>
+
+        <dt>
+            x3
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdNumberOfSequence)
+        </dd>
+
+        <dt>
+            x4
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FourthNumberOfSequence)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="alert-warning">
+        <b> @ViewBag.Message </b>
+    </div>
+    <br />
+    <br />
+<p>
+
+    @Html.ActionLink("Go Back to Question", "Lost_Number")
+</p>
+
+<br />
+<br />
+<br />
+<br />
+<br />

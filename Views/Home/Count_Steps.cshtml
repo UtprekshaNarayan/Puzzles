@@ -1,0 +1,56 @@
+﻿@model Game.Models.CountNumberOfJumps
+
+@{
+    ViewBag.Title = "Count_Steps";
+}
+<br />
+<br />
+<br />
+
+<div class="container">
+    <h2 style="color:#069">Level 2</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+
+            <br />
+            <strong>
+                <b>
+                    Bholu wants to climb a stair which have total  @Model.Steps steps . He can jump 1,2 or 3 steps to go to top.
+                    You have to help him to calculate in <b>how many ways can he reach the top.</b>
+            </strong>
+            <br />
+            <br />
+
+        </div>
+
+
+    </div>
+
+    <div class="panel-body">
+
+        @using (Html.BeginForm("Calculate_Steps", "Home", FormMethod.Post))
+        {
+            <h3>Write answer</h3> @Html.TextBox("UserAns_Steps")
+
+            <button type="submit">Submit</button>
+        }
+        <br />
+        <br />
+        <div class="alert-warning">
+            @ViewBag.Message
+        </div>
+
+    </div>
+
+
+    <br />
+    <br />
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,64 @@
+﻿@model Game.Models.AllPossiblePaths
+
+@{
+    ViewBag.Title = "PossiblPath";
+}
+
+<div class="container">
+    :
+    <h2 style="color:#069">Level 4</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p>
+                <strong>
+                    Help Ricky to find all possible path to reach to the Prize which is kept on floor<br />.The floor has nXm matrix design pattern !.<br />
+                    The prize is kept on the bottom right of the floor. Ricky is standing on the top left of the floor. <br />
+
+                    ______________________<br />
+                    |_BHOLU_|_____|______| <br />
+                    |_______|______|_______| <br />
+                    |_______|______|_Prize_| <br />
+
+                    <br />
+                    <br />
+                    Bholu can walk either right or down.
+
+                </strong>
+            </p>
+            <br />
+            <br />
+            <h3>
+                <i>
+                    The dimension of the floor is Floor[@Model.Length][@Model.Breath]<br />
+                    Find all possible paths  ?
+                </i>
+            </h3>
+            <br />
+            <br />
+
+
+        </div>
+    </div>
+</div>
+<br />
+<br />
+
+
+
+
+
+@using (Html.BeginForm("Find_AllPossibePaths", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h3>Write All Possible Paths</h3> @Html.TextBox("userAns")
+
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("View Question", "PossiblPath")
+</div>
